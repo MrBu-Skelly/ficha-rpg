@@ -1,0 +1,98 @@
+body {
+    margin: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Mudamos de 'background' para 'background-image' e adicionamos 'no-repeat' */
+    background-image: linear-gradient(180deg, #ffbb00, #120000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Faz o degradê esticar para cobrir tudo sem repetir */
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+.portrait {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.portrait img {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    border: 2px solid rgb(251, 255, 0);
+}
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+.card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+}
+/* Estilo unificado para inputs de número */
+input[type="number"] {
+    width: 60px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 4px;
+    text-align: center;
+}
+input[type="number"]:focus {
+    border-color: #ffbb00;
+}
+/* Grade de Atributos */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.status-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Barras de Status */
+.bar {
+    width: 100%;
+    height: 18px;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+.bar-fill {
+    height: 100%;
+    transition: width .3s;
+}
+.life { background: linear-gradient(90deg, #a00000, #ff2b2b); }
+.mana { background: linear-gradient(90deg, #2b00ff, #6a5cff); }
+/* Listas e Rodapé */
+ul { padding-left: 18px; margin: 6px 0; }
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+/* Remove setas dos inputs de número */
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,26 @@
+cria o banco de dados
+
+-- 1. Cria o banco de dados (se ele ainda não existir)
+CREATE DATABASE IF NOT EXISTS rpg_db;
+USE rpg_db;
+
+-- 2. Cria a tabela 'personagens' com os nomes exatos da sua imagem
+CREATE TABLE IF NOT EXISTS personagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    vidamax INT DEFAULT 50,
+    vidaat INT DEFAULT 0,
+    manamax INT DEFAULT 55,
+    manaat INT DEFAULT 0,
+    forca INT DEFAULT 0,
+    agilidade INT DEFAULT 0,
+    constituicao INT DEFAULT 0,
+    carisma INT DEFAULT 0,
+    inteligencia INT DEFAULT 0,
+    sabedoria INT DEFAULT 0,
+    feitico VARCHAR(255) DEFAULT '4'
+);
+
+-- 3. Insere o personagem ∆KORUJO∆ com os valores que aparecem na sua imagem
+INSERT INTO personagens (id, nome, vidamax, vidaat, manamax, manaat, forca, agilidade, constituicao, carisma, inteligencia, sabedoria, feitico)
+VALUES (5, '∆KORUJO∆', 50, 3, 55, 55, 2, 4, 1, 1, 4, 3, '4');
